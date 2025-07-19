@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#ProHead {
+  text-align: center;
+  margin-top: 10rem;
+  color: rgb(239, 34, 126);
+  text-shadow: 1px 1px 5px rgb(253, 182, 221);
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+/* card container */
+.container3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem; /* increased gap */
+  align-items: flex-start;
+  padding: 2rem; /* more spacing */
+  margin-top: 3rem;
+}
+
+/* individual card */
+.card {
+  width: 230px;
+  height: 360px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgb(144, 144, 144);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  color: white;
+  position: relative;
+  margin: auto;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  box-shadow: 0 0 10px 1px rgb(123, 123, 255), 0 0 20px 2px rgb(252, 159, 174);
+  background: linear-gradient(to bottom, rgba(247, 106, 129, 0.306), rgba(194, 37, 229, 0.356));
+}
+
+.card:hover .content {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* image inside the card */
+.projectImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* card content */
+.content {
+  padding: 1rem;
+}
+
+.content h3 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content p {
+  font-size: 0.95rem;
+  color: #c3c2c2;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+
+.link {
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: block;
+}
+
+/* overlay view text */
+.view-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20pt;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-align: center;
+}
+
+.card:hover .view-text {
+  opacity: 1;
+}
+
+.img-container {
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .img-container {
+  opacity: 0;
+}
+
+/* Larger screens (above 1440px) scaling */
+@media screen and (min-width: 1441px) {
+  #ProHead {
+    font-size: 5rem;
+    margin-top: 13rem;
+  }
+
+  .container3 {
+    gap: 6rem;
+    padding: 3rem;
+  }
+
+  .card {
+    width: 280px;
+    height: 420px;
+  }
+
+  .projectImg {
+    height: 230px;
+  }
+
+  .content h3 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  .view-text {
+    font-size: 24pt;
+  }
+}

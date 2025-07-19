@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.land{
+  position: relative;
+  height:100vh; 
+  margin-bottom: 1rem;;
+}
+html {
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section,
+#home,
+#about,
+#skills,
+#experience,
+#project {
+  scroll-margin-top: 80px; /* Adjust to your navbar height */
+}
+

@@ -1,0 +1,175 @@
+#head{
+  text-align: center;
+  position: relative;
+  top:2rem;
+  width:fit-content;
+  padding:1rem;
+  background: linear-gradient(to right, #0540f0, #cb05ce); /* Pink to Purple */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid rgb(25, 25, 25);
+  border-radius: 10%;
+  font-size: 24pt;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  animation: neonPulse 2s ease-in-out infinite;
+
+}
+#skills{
+  height:100vh;
+}
+#superHead{
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.terminal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background: #121212;
+}
+
+.terminal {
+  background: #1e1e1e;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2e2e2e;
+  padding: 8px 12px;
+}
+
+.terminal-buttons span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.terminal-buttons .red { background: #ff5f56; }
+.terminal-buttons .yellow { background: #ffbd2e; }
+.terminal-buttons .green { background: #27c93f; }
+
+.start-button {
+  background: none;
+  color: white;
+  border: 1px solid #00ff00;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.terminal-body {
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.skill-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.skill-text {
+  white-space: pre;
+}
+
+
+
+
+/* Animations */
+@keyframes neonPulse {
+  0%, 100%{
+    box-shadow: 
+    0 0 15px rgb(254, 63, 63),
+    0 0 20px rgb(34, 172, 6)
+    0 0 10px rgb(0, 102, 255);
+  }
+  50% {
+    box-shadow:
+     0 0 20px rgb(254, 63, 63),
+    0 0 25px rgb(34, 172, 6),
+    0 0 15px rgb(0, 102, 255);
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+@media (min-width: 1441px) {
+  #skills {
+    padding-top: 2rem;
+  }
+
+  .terminal-container {
+    height: 85vh;
+  }
+
+  .terminal {
+    width: 800px;
+    font-size: 1.1rem;
+  }
+
+  .terminal-body {
+    height: 400px;
+  }
+
+  .skill-icon {
+    font-size: 24px;
+  }
+
+  .skill-text {
+    font-size: 18px;
+  }
+
+  head {
+    font-size: 32pt;
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .terminal {
+    width: 1000px;
+    font-size: 1.25rem;
+  }
+
+  .terminal-body {
+    height: 500px;
+  }
+
+  .skill-icon {
+    font-size: 28px;
+  }
+
+  .skill-text {
+    font-size: 20px;
+  }
+
+  head {
+    font-size: 36pt;
+    padding: 2rem 3rem;
+  }
+}
