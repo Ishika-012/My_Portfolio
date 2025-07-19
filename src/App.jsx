@@ -1,5 +1,5 @@
 import Landing from './components/landing';
-import AboutUs from './components/Aboutus';
+import AboutUs from './components/AboutUs';
 import Skill from './components/skillsBox';
 import Project from './components/Project';
 import Experience from './components/Education';
