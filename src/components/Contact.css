@@ -1,20 +1,39 @@
-/* Prevent scrolling when thank-you message is shown */
+/* ===================== */
+/* General Reset + Layout */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ======================= */
+/* Thank-you Section Style */
+/* ======================= */
+
 .no-scroll {
   overflow: hidden;
   height: 100vh;
 }
 
-/* Thank-you full-screen section */
 .thank-you-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
+  background-color: #111;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  background-color: #000;
+  z-index: 9999;
 }
 
-/* Thank-you message styling */
 .thank-you-message {
   text-align: center;
   padding: 3rem 2rem;
@@ -29,7 +48,6 @@
   margin: auto;
 }
 
-/* Go Back Button */
 .go-home-btn {
   margin-top: 2rem;
   padding: 0.8rem 1.5rem;
@@ -46,11 +64,15 @@
   background-color: #009fd4;
 }
 
-/* Regular contact styles */
+/* ======================= */
+/* Regular Contact Section */
+/* ======================= */
+
 .contact-section {
   padding: 4rem 2rem;
   background: #000;
   color: #fff;
+  width: 100%;
 }
 
 .heading-area {
@@ -69,12 +91,23 @@
   margin-top: 0.5rem;
 }
 
+/* ======================= */
+/* Contact Layout Grid     */
+/* ======================= */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+/* ======================= */
+/* Form Area               */
+/* ======================= */
 
 .contact-form {
   display: flex;
@@ -135,8 +168,13 @@
   background: #009fd4;
 }
 
+/* ======================= */
+/* Contact Image           */
+/* ======================= */
+
 .contact-image {
   display: block;
+  width: 100%;
 }
 
 .contact-image img {
@@ -147,15 +185,35 @@
   object-fit: cover;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ======================= */
+/* Responsive Design       */
+/* ======================= */
+
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 2.2rem;
+  }
+
+  .sub-heading {
+    font-size: 1.1rem;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    justify-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 1.8rem;
   }
 
   .contact-image {
     order: -1;
+    width: 100%;
+    max-width: 500px;
   }
 
   .contact-image img {
@@ -165,53 +223,26 @@
   }
 }
 
-/* Prevent page scroll */
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
 
-/* Thank-you full-screen layout */
-.thank-you-fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
+  .sub-heading {
+    font-size: 1rem;
+  }
 
-/* Thank-you message content */
-.thank-you-message {
-  text-align: center;
-  padding: 3rem 2rem;
-  color: #00bfff;
-  font-size: 2rem;
-  font-weight: bold;
-  background-color: #111;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #00bfff88;
-  max-width: 600px;
-  width: 90%;
-}
+  .contact-section {
+    padding: 3rem 1.2rem;
+  }
 
-/* Go back button */
-.go-home-btn {
-  margin-top: 2rem;
-  padding: 0.8rem 1.5rem;
-  background-color: #00bfff;
-  color: black;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+  .thank-you-message {
+    font-size: 1.6rem;
+    padding: 2.5rem 1.5rem;
+  }
 
-.go-home-btn:hover {
-  background-color: #009fd4;
+  .go-home-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
